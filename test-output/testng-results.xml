@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12250" started-at="2022-06-24T16:17:38 IST" finished-at="2022-06-24T16:17:50 IST">
+  <suite name="Default suite" duration-ms="8932" started-at="2022-06-24T17:45:24 IST" finished-at="2022-06-24T17:45:33 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12250" started-at="2022-06-24T16:17:38 IST" finished-at="2022-06-24T16:17:50 IST">
+    <test name="Default test" duration-ms="8932" started-at="2022-06-24T17:45:24 IST" finished-at="2022-06-24T17:45:33 IST">
       <class name="Coreyoo.Coreyoo_Project.SignUpTest">
-        <test-method status="PASS" signature="startTest()[pri:0, instance:Coreyoo.Coreyoo_Project.SignUpTest@15d9bc04]" name="startTest" is-config="true" duration-ms="4710" started-at="2022-06-24T16:17:38 IST" finished-at="2022-06-24T16:17:42 IST">
+        <test-method status="PASS" signature="startTest()[pri:0, instance:Coreyoo.Coreyoo_Project.SignUpTest@15d9bc04]" name="startTest" is-config="true" duration-ms="4327" started-at="2022-06-24T17:45:24 IST" finished-at="2022-06-24T17:45:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="signUp()[pri:0, instance:Coreyoo.Coreyoo_Project.SignUpTest@15d9bc04]" name="signUp" duration-ms="3397" started-at="2022-06-24T16:17:42 IST" finished-at="2022-06-24T16:17:46 IST">
+        <test-method status="PASS" signature="signUp()[pri:0, instance:Coreyoo.Coreyoo_Project.SignUpTest@15d9bc04]" name="signUp" duration-ms="389" started-at="2022-06-24T17:45:28 IST" finished-at="2022-06-24T17:45:29 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUp -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:Coreyoo.Coreyoo_Project.SignUpTest@15d9bc04]" name="endTest" is-config="true" duration-ms="4125" started-at="2022-06-24T16:17:46 IST" finished-at="2022-06-24T16:17:50 IST">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:Coreyoo.Coreyoo_Project.SignUpTest@15d9bc04]" name="endTest" is-config="true" duration-ms="4198" started-at="2022-06-24T17:45:29 IST" finished-at="2022-06-24T17:45:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->

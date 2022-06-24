@@ -15,7 +15,6 @@ public class HomePage {
 	@FindBy(xpath="//span[text()='Login | Signup']")
 	private static WebElement signUpBtn1;
 	
-	//@FindBy(xpath="//*[text()='Signup']")
 	@FindBy(xpath="//button[text()='Sign up']")
 	private static WebElement signUpBtn2;
 	
