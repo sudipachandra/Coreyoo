@@ -13,10 +13,8 @@ public class SignUpTest extends Base{
 		homePage.signUpDetails();
 	}
 	
-	public void login() {
-		HomePage homePage = new HomePage(driver);
-		homePage.clickLoginOrSignUpLink();
-		
-	}
+	
+	
+	
 	
 }

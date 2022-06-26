@@ -1,6 +1,7 @@
 package Coreyoo.Coreyoo_Project;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,37 +14,68 @@ public class HomePage {
 	WebDriver driver = null;
 	
 	@FindBy(xpath="//span[text()='Login | Signup']")
-	private static WebElement signUpBtn1;
+	private WebElement signUpBtn1;
 	
 	@FindBy(xpath="//button[text()='Sign up']")
-	private static WebElement signUpBtn2;
+	private WebElement signUpBtn2;
 	
 	@FindBy(xpath="//*[text()='First Name']")
-	private static WebElement firstNameField;
+	private WebElement firstNameField;
 	
 	@FindBy(xpath="//*[text()='Last Name']")
-	private static WebElement lastNameField;
+	private WebElement lastNameField;
 	
 	@FindBy(xpath="//*[text()='Email Address']")
-	private static WebElement emailAddressField;
+	private WebElement emailAddressField;
 	
 	@FindBy(xpath="//*[text()='Mobile No.']")
-	private static WebElement mobileNoField ;
+	private WebElement mobileNoField ;
 	
 	@FindBy(xpath="//*[text()='Password']")
-	private static WebElement passwordField ;
+	private WebElement passwordField ;
 	
 	@FindBy(xpath="//*[text()='Register']")
-	private static WebElement registerBtn ;
+	private WebElement registerBtn ;
 	
 	@FindBy(xpath="//button[text()='Login with email']")
-	private static WebElement loginWithEmailLink ;
+	private WebElement loginWithEmailLink ;
 	
-	@FindBy(xpath="*[text()='Email Address']")
-	private static WebElement emailIdForLogin ;
+	@FindBy(xpath="//input[@type='email']")
+	private WebElement emailIdForLogin ;
 	
-	@FindBy(xpath="Password")
-	private static WebElement passwordForLogin ;
+	@FindBy(xpath="//input[@type='password']")
+	private WebElement passwordForLogin ;
+	
+	@FindBy(xpath="//*[text()='Log in']/parent::button")
+	private WebElement loginBtn ;
+	
+	@FindBy(xpath="//*[@name='pickupLocation']")
+	private WebElement pickUpLocationField ;
+	
+	@FindBy(xpath="//*[@name='deliveryLocation']")
+	private WebElement deliveryLocationField  ;
+	
+	@FindBy(xpath="//div[@id = 'headlessui-radiogroup-option-193']")
+	//@FindBy(xpath="//*[@id='headlessui-radiogroup-option-32']")
+	private WebElement documentRadioBtn ;
+	
+	@FindBy(xpath="//*[text()='parcel']/../../../div/div[2]/label/span")
+	private WebElement  parcelRadioBtn;
+	
+	@FindBy(xpath="//input[@name='weight']")
+	private WebElement weightField ;
+	
+	@FindBy(xpath="//input[@name='length']")
+	private WebElement lengthField;
+	
+	@FindBy(xpath="//input[@name='width']")
+	private WebElement widthField;
+	
+	@FindBy(xpath="//input[@name='height']")
+	private WebElement heigthField;
+	
+	@FindBy(xpath="//button[@type='submit']")
+	private WebElement findProviderBtn ;
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -62,12 +94,13 @@ public class HomePage {
 	
 	public void clickLoginWithMail() {
 		WebDriverWait wait = new WebDriverWait(this.driver, 10000);
-		wait.until(ExpectedConditions.elementToBeClickable(loginWithEmailLink));
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(loginWithEmailLink));
+		element.click();
 	}
 	
 	public HomePage signUpDetails() {
-		firstNameField.sendKeys("sudipa");
-		lastNameField.sendKeys("bhunia");
+		firstNameField.sendKeys("student");
+		lastNameField.sendKeys("roy");
 		emailAddressField.sendKeys("test@123");
 		mobileNoField.sendKeys("1234567853");
 		passwordField.sendKeys("test123456");
@@ -76,5 +109,33 @@ public class HomePage {
 		
 	}
 	
+	public HomePage login() {
+		WebDriverWait wait = new WebDriverWait(this.driver, 10000);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(emailIdForLogin));
+		element.sendKeys("sudipabhunia@gmail.com");
+		passwordForLogin.sendKeys("12341234");
+		loginBtn.click();
+		return new HomePage(driver);
+	}
 	
+	public void documentDetails() throws Exception{
+		Thread.sleep(2000);
+		pickUpLocationField.sendKeys("560102");
+		deliveryLocationField.sendKeys("721101");
+		weightField.sendKeys("100");
+		findProviderBtn.click();
+	}
+	
+	public void parcelDetails() throws Exception{
+		Thread.sleep(2000);
+		pickUpLocationField.sendKeys("560102");
+		deliveryLocationField.sendKeys("721101");
+		parcelRadioBtn.click();
+		weightField.sendKeys("100");
+		lengthField.sendKeys("10");
+		widthField.sendKeys("11");
+		heigthField.sendKeys("15");
+		findProviderBtn.click();
+	}
+		
 }

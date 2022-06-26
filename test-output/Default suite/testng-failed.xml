@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Coreyoo.Coreyoo_Project.SignUpTest">
+      <class name="Coreyoo.Coreyoo_Project.DocumentTest">
         <methods>
           <include name="startTest"/>
-          <include name="signUp"/>
+          <include name="chooseProvider"/>
           <include name="endTest"/>
         </methods>
-      </class> <!-- Coreyoo.Coreyoo_Project.SignUpTest -->
+      </class> <!-- Coreyoo.Coreyoo_Project.DocumentTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

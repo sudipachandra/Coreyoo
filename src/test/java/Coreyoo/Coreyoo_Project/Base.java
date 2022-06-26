@@ -24,6 +24,6 @@ public class Base {
 	@AfterMethod
 	public void endTest() throws InterruptedException {
 		Thread.sleep(4000);
-		driver.close();
+    	driver.close();
 	}
 }

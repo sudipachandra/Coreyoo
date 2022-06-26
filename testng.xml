@@ -3,7 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="Coreyoo.Coreyoo_Project.LoginTest"/>
       <class name="Coreyoo.Coreyoo_Project.SignUpTest"/>
+      <class name="Coreyoo.Coreyoo_Project.ParcelTest"/>
+      <class name="Coreyoo.Coreyoo_Project.DocumentTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
